@@ -1,0 +1,116 @@
+
+/*
+ * GLOBALS
+ */
+ @import "../../../variables.scss";
+
+.aov_case_studies_wrap{
+    .aov_title_header{
+        margin-bottom: 50px;
+    }
+    .aov_our_company_right{
+        img{
+            background: $aov_normal_blue;
+            border-radius: 100%;
+        }
+    }
+    .aov_case_studies_cta_wrap{
+        background: url('../../../assets/images/video-background.png') top center no-repeat;
+        background-position: top center;
+        background-size: cover;
+        padding-top: 140px;
+        padding-bottom: 350px;
+        // margin-bottom: 70px;
+        
+        .aov_case_studies_cta_circles_holder{
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+            overflow: hidden;
+            height: auto;
+            padding-bottom: 490px;
+            // margin-top: -110px;
+        
+            .aov_case_studies_cta_circles_wrap{
+                
+                .aov_case_studies_cta_circles_item{
+                    border-radius: 100%;
+                    position: relative;
+        
+                    &.gray1{
+                        width: 580px;
+                        height: 580px;
+                        background: #eaeaea;
+                        right: -190px;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                    &.gray2{
+                        width: 280px;
+                        height: 280px;
+                        border: 50px solid #eaeaea;
+                        left: calc(50%);
+                        position: relative;
+                        top: 125px;
+                    }
+                    
+                    &.orange1{
+                        width: 250px;
+                        height: 250px;
+                        border: 50px solid $aov_normal_orange;
+                        bottom: 35px;
+                        position: absolute;
+                    }
+                    &.orange2{
+                        border:50px solid $aov_normal_orange;
+                        width: 250px;
+                        height: 250px;
+                        right: 0px;
+                        bottom: 50px;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+        
+        .aov_case_studies_cta_left{
+            .aov_tools_item{
+                img{
+                    border-radius: 50%;
+                }
+            }
+            p{
+                color: white;
+            }
+            a{
+                text-decoration: none;
+                color: white;
+                opacity: .8;
+                @include aov_transition (all, .25s);
+        
+                &.aov_play_button{
+                    font-size: 13vmin;
+                    margin-left: 27%;
+            
+                    &:hover{
+                        color: $aov_normal_orange;
+                    }
+                }
+            }
+        }
+        .aov_case_studies_cta_right{
+            text-align: center;
+            padding-left: 137px;
+    
+            img{
+                border-radius: 50%;
+                box-shadow: 6px 7px 18px 0px #333333;
+                padding: 10px;
+            }
+        }
+    }
+
+    .aov_case_studies_cta_divider{
+        margin: 100px;
+    }
+}

@@ -1,0 +1,24 @@
+
+ 
+
+/*
+ * GLOBALS
+ */
+@import "../variables.scss";
+
+
+
+ :host ::ng-deep router-outlet ~ * {
+  
+    position: absolute;
+    width: 100%;
+    // @include aov_transition (all, .25s);
+  
+    main {
+      flex: 1;
+      position: relative;
+      // @include aov_transition (all, .25s);
+    }
+  
+  }
+   

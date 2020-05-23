@@ -1,0 +1,47 @@
+/*
+ * GLOBALS
+ */
+ @import "../../../variables.scss";
+
+.aov_footer_wrap{
+    background: url('../../../assets/images/footer_BG.png')  top no-repeat; //bottom
+    background-size: cover;
+
+    // padding: 340px 0px 50px 0px;
+    // margin-top: -350px;
+
+    padding: 390px 0px 50px 0px;
+    margin-top: -490px
+    ;
+    @include aov_transition (background, .25s);
+
+    li, a, p{
+        color: white;
+    }
+
+    a{
+        @include aov_transition (all, .25s);
+
+        &:hover{
+            color: $aov_normal_orange;
+        }
+    }
+    
+    .aov_social_icons{
+        font-size: 35px;
+        color: white;
+        @include aov_transition (all, .25s);
+
+        &:hover{
+            color: $aov_normal_orange;
+        }
+    }
+    .aov_footer_badge{
+        width: 50px;
+    }
+    .aov_footer_nav{
+        a{
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+/*
+ * GLOBALS
+ */
+ @import "../../../variables.scss";
+  
+ 
+/*
+* LOCATIONS
+*/
+.aov_locations_wrap{
+margin: 100px 0px;
+padding-top: 100px;
+background: url('../../../assets/images/locations-bacground.png') 25% no-repeat;
+background-size: cover;
+
+
+.aov_locations_header{
+    margin-bottom: 50px;
+}
+.aov_locations_item_wrap{
+    position: relative;
+    z-index: 1;
+
+    .aov_locations_item{
+        padding: 20px;
+        border-radius: 20px;
+        border: 1px solid #C2C2C2;
+        background: white;
+        -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.34901960784313724); 
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.34901960784313724);
+        border: 10px solid white;
+        @include aov_transition (all, .25s);
+
+        &.active, &:hover{
+            border: 10px solid $aov_normal_orange;
+            cursor: cell;
+        }
+
+
+        .aov_title_header{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        span{
+
+            &.aov_location_item_icon{
+                margin-right: 20px;
+                color: $aov_normal_blue;
+                font-size: 30px;
+                position: relative;
+            }
+        }
+        .aov_location_item_details{
+            margin-top: 10px;
+        }
+        
+    }
+    }
+    
+    .aov_locations_map_wrap{
+    position: relative;
+    top: -160px;
+    min-height: 700px;
+    background: #cccccc;
+    border-top: 15px solid $aov_normal_blue;
+    border-bottom: 15px solid $aov_normal_blue;
+    width: 100%;
+    // margin-bottom: 200px;
+    
+}
+.aov_locations_circles_holder{
+    margin-bottom: -240px;
+
+    .aov_locations_map_circles_wrap{
+        float: right;
+        position: relative;
+        top: -110px;
+    
+
+        .aov_locations_map_circles_item{
+            
+            border-radius: 100%;
+            position: relative;
+
+            &.gray{
+                width: 180px;
+                height: 180px;
+                right: 60px;
+                bottom: -5px;
+                border: 30px solid white;
+            }
+            &.orange{
+                border: 40px solid $aov_normal_orange;
+                width: 250px;
+                height: 250px;
+            //    top: -90px;
+            //    left: -240px;
+            }
+        }
+    }
+    }
+
+}

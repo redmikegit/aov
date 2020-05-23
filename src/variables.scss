@@ -1,0 +1,23 @@
+
+$aov_normal_orange: #ff8a00;
+$aov_hover_orange: #d17001;
+$aov_normal_blue: #072b66;
+$aov_hover_blue: #0a1d3a;
+
+
+@mixin aov_transform_rotate ($deg) {   
+    -moz-transform: scale(1) rotate($deg) translateX(2px) translateY(2px) skewX(0deg) skewY(0deg);
+    -webkit-transform: scale(1) rotate($deg) translateX(2px) translateY(2px) skewX(0deg) skewY(0deg);
+    -o-transform: scale(1) rotate($deg) translateX(2px) translateY(2px) skewX(0deg) skewY(0deg);
+    -ms-transform: scale(1) rotate($deg) translateX(2px) translateY(2px) skewX(0deg) skewY(0deg);
+    transform: scale(1) rotate($deg) translateX(2px) translateY(2px) skewX(0deg) skewY(0deg);
+}
+
+@mixin aov_transition ($type, $seconds) {
+    -webkit-transition: $type $seconds ease-out !important;
+    -moz-transition: $type $seconds ease-out !important;
+    -ms-transition: $type $seconds ease-out !important;
+    -o-transition: $type $seconds ease-out !important;
+    transition: $type $seconds ease-out !important;
+}
+

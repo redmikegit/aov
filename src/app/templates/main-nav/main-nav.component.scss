@@ -1,0 +1,72 @@
+/*
+ * GLOBALS
+ */
+ @import "../../../variables.scss";
+
+
+
+/*
+* MAIN MENU
+*/
+.aov_main_menu_wrap{
+  
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    
+    ul{
+        li{
+
+            a{
+                color: white;
+                
+                
+                &:hover{
+                //   color: $aov_normal_orange;
+                //   border-bottom: 3px solid $aov_normal_orange;
+                
+                    .aov_underline{
+                        animation: slide-in 1s;
+                        width: 100%;
+                        height: 5px;
+                        background: $aov_normal_orange !important;
+                        border-radius: 5px;
+                        margin-top: 5px;
+                    }
+                }
+
+                &.active{
+                    color: $aov_normal_orange;
+
+                    .aov_underline{
+                        //  animation: slide-out 2s;
+                        // animation-delay: 1s;
+                         width: 100%;
+                        height: 5px;
+                        background: $aov_normal_orange;
+                        border-radius: 5px;
+                        margin-top: 5px;
+                    }
+                }
+                
+            }
+            
+        }
+    }
+    
+
+    
+}
+
+@keyframes slide-in {
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        width: 100%;
+    }
+  }
+ 

@@ -1,0 +1,58 @@
+<app-top-nav></app-top-nav>
+<app-main-nav></app-main-nav>
+<div class="body_bg aov_inner"></div>
+<div class="aov_faq_wrap">
+
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="aov_inner_page_header_wrap cell medium-12 text-center">
+        <h2 class="aov_title_header blue">{{title}}</h2>
+      </div>
+      <div class=" cell medium-6 medium-offset-3 text-center">
+        <h5 class="aov_sub_title blue">How can we help you?</h5>
+        <input type="text" class="aov_input" placeholder="Search">
+      </div>
+
+      <div class="cell medium-12 aov_faq_divider text-center"></div>
+
+      <div *ngFor="let faq of faqs" id="{{ faq.faq_id }}" class="cell medium-4 aov_faq_item text-center" > 
+        <!-- [class.selected]="faq === selectedFaq" -->
+        <h4 class="aov_title_header blue ">{{ faq.faq_title }}</h4>
+        <p>{{ faq.faq_description }}</p>
+        <a routerLink="/faq/{{faq.faq_id}}" class="button tiny round aov_button_primary">View All Questions</a>
+        <!-- <a class="button tiny round aov_button_primary" (click)="onSelect(faq)">View All Questions</a> -->
+      </div>
+
+
+      <!-- <app-faq-detail [faq]="selectedFaq"></app-faq-detail> -->
+
+      <!-- <div *ngIf="selectedFaq">
+
+        <h2>{{ faq.faq_title }} Details</h2>
+        <div><span>id: </span>{{selectedFaq.faq_id}}</div>
+        <div>
+          <label>name:
+            <input [(ngModel)]="selectedFaq.faq_title" placeholder="name"/>
+          </label>
+        </div>
+      
+      </div> -->
+      
+      <div class="cell medium-12 aov_faq_divider text-center"></div>
+
+    </div>
+  </div>
+
+
+  <div class="aov_faq_circles_holder">
+    <div class="aov_faq_circles_wrap">
+      <div class="aov_faq_circles_item gray1"></div>
+      <div class="aov_faq_circles_item gray2"></div>
+      <div class="aov_faq_circles_item orange1"></div>
+      <div class="aov_faq_circles_item blue"></div>
+    </div>
+  </div>
+
+</div><!-- // aov_faq_wrap-->
+
+<app-footer></app-footer>

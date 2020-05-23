@@ -19,6 +19,10 @@
     "@angular/platform-browser": "~8.2.3",
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
+    "@nicky-lenaers/ngx-scroll-to": "^3.0.1",
+    "@w11k/angular-sticky-things": "^1.1.2",
+    "foundation-sites": "^6.5.3",
+    "ngx-foundation": "^1.0.8",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

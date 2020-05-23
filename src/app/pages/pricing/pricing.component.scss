@@ -1,0 +1,32 @@
+/*
+ * GLOBALS
+ */
+ @import "../../../variables.scss";
+
+.aov_pricing_wrap{
+    margin-bottom: 200px;
+
+    .aov_title_header{
+        margin-bottom: 50px;
+    }
+    .aov_pricing_description{
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .aov_pricing_item{
+        padding: 20px;
+        border-radius: 20px;
+        border: 1px solid rgb(231, 231, 231);
+        background: white;
+        @include aov_transition (all, .25s);
+        
+        &:hover{
+            -webkit-box-shadow: 0 0 10px 5px #C2C2C2;
+            box-shadow: 0 0 10px 5px #C2C2C2;
+        }
+
+        .aov_title_header{
+            margin: 30px 0px;
+        }
+    }
+}

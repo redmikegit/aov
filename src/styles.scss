@@ -1,1 +1,226 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+
+/*
+ * Thanks Philip Walton for this very simple sticky footer code. https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+ */
+// .Site {
+//     display: flex;
+//     min-height: 100vh;
+//     flex-direction: column;
+//   }
+  
+//   .Site-content {
+//     flex: 1;
+//   }
+
+
+/*
+ * Import Foundation 6.5.3
+ */
+//  @import url("https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css");
+
+// Import Foundation for Sites
+// See https://foundation.zurb.com/sites/docs/sass.html for detailed info.
+@import '~foundation-sites/scss/foundation';
+  @include foundation-everything;
+
+// Import Angular ngx-foundation Framework Added Styles
+@import "~ngx-foundation/assets/scss/main";
+   
+
+ /*
+  * Import Google Fonts
+  */
+  // font-family: 'Nunito', sans-serif;
+  // font-family: 'Poppins', sans-serif;
+  @import url('https://fonts.googleapis.com/css?family=Nunito|Poppins&display=swap');
+
+ 
+/*
+ * GLOBALS
+ */
+ @import "variables.scss";
+
+body, h1, h2, h3, h4, h5, p, span{
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  // overflow-y: hidden; 
+  margin: 0;
+  background-position-y: 1000%;
+  // @include aov_transition (background, 1s);
+  // animation-name: drop-in 1s;
+  // -webkit-animation-name: drop-in 1s;
+  
+  .body_bg{
+    z-index: -1; 
+    height: 100%; 
+    width: 100%; 
+    position: absolute;
+    top: -60px;
+    
+    &.aov_home{
+      background: url('assets/images/header_BG.png') no-repeat top ;
+    }
+    &.aov_inner{
+      background: url('assets/images/header_inner_BG.png') no-repeat top ;
+    }
+  }
+
+  
+}
+
+.bold_font{
+  font-weight: bold;
+}
+.aov_title_header{
+  text-transform: uppercase;
+  line-height: 45px;
+  font-weight: bold;
+
+  &.white{ color: white;}
+  &.black{ color: rgb(77, 77, 77);}
+  &.blue{ color: $aov_normal_blue;}
+  &.orange{ color: $aov_normal_orange;}
+
+  &.normal_font{
+    text-transform: inherit !important;
+  }
+}
+.aov_sub_title{
+  font-weight: bold;
+  &.gray{
+    color: #454545;
+  }
+  &.blue{
+     color: $aov_normal_blue;
+    }
+}
+
+button, .button{
+  &.round{
+    border-radius: 50px;
+  }
+  &.orange{
+    color: $aov_normal_orange;
+  }
+
+  span{
+    margin:0px 10px; 
+  }
+
+ 
+}
+.aov_input, .aov_input:focus{
+  border-radius: 20px;
+  background: $aov_normal_blue;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 20px;
+  margin: 0px 10px;
+}
+a, button, .button{
+  @include aov_transition (all, .25s);
+
+  &.aov_callout_link{
+    color: $aov_normal_orange;
+    font-size: 2vmin;
+    font-weight: bold;
+
+    &:hover{
+      color: $aov_normal_blue;
+    }
+  }
+}
+
+.aov_button_clear{
+  padding-left: 0px;
+
+  &:hover{
+    border: 1px solid white !important;
+    border-radius: 20px;
+    padding-left: 10px !important;
+    color: white !important;
+  }
+}
+.aov_button_primary{
+  background: $aov_normal_orange;
+  font-weight: bold;
+  
+  &:hover{
+    background: $aov_hover_orange;
+  }
+  &.blue{
+    background: $aov_normal_blue;
+      
+      &:hover{
+        background: $aov_hover_blue;
+      }
+  }
+
+}
+
+
+/*
+ * TOPNAV
+ */
+
+ .aov_top_nav_wrap{
+   
+  // background: $aov_normal_blue;
+  padding: 10px;
+  color: white;
+
+  a{
+      color: white;
+  }
+
+
+  
+}
+
+
+/*
+  * INNER PAGE
+  */
+  .aov_inner_page_header_wrap{
+    margin-top: 200px;
+  }
+  
+  .is-sticky{
+    position: sticky !important;
+  }
+
+  .aov_inner_page_header{
+    @include aov_transition (all, .25s);
+    background: url('assets/images/Inner_page_header_bg.png') top left no-repeat;
+    background-size: cover;
+    padding: 50px 50px 120px 50px;
+    margin-top: 50px;
+
+    // position: -webkit-sticky;
+    // position: sticky !important;
+    // top: 1rem;
+
+    
+
+    ul{
+
+      &.menu{
+        li{
+          a{
+            display: block;
+            color: white;
+            text-transform: uppercase;
+
+            &:hover{
+              color: $aov_normal_orange;
+            }
+          }
+        }
+      }
+
+    }
+  }

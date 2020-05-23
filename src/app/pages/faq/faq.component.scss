@@ -1,0 +1,90 @@
+/*
+ * GLOBALS
+ */
+ @import "../../../variables.scss";
+
+.aov_faq_wrap{
+    margin-bottom: 200px;
+
+    .aov_title_header{
+        margin-bottom: 50px;
+    }
+    .aov_faq_description{
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .aov_faq_item{
+        margin-bottom: 30px;
+        padding: 20px;
+        border-radius: 20px;
+        border: 1px solid rgb(231, 231, 231);
+        background: white;
+        @include aov_transition (all, .25s);
+        
+        &:hover{
+            -webkit-box-shadow: 0 0 10px 5px #C2C2C2;
+            box-shadow: 0 0 10px 5px #C2C2C2;
+        }
+
+        .aov_title_header{
+            margin: 30px 0px;
+        }
+        .button{
+            padding: 10px 20px;
+        }
+    }
+    .aov_faq_divider{
+        padding: 50px 0px;
+    }
+
+    .aov_faq_circles_holder{
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        overflow: hidden;
+        height: auto;
+        padding-bottom: 300px;
+        top: calc(50%);
+
+        .aov_faq_circles_wrap{
+            
+            .aov_faq_circles_item{
+                border-radius: 100%;
+                position: relative;
+
+                &.gray1{
+                    width: 580px;
+                    height: 580px;
+                    background: #eaeaea;
+                    right: -190px;
+                    position: absolute;
+                    z-index: -1;
+                }
+                &.gray2{
+                    width: 280px;
+                    height: 280px;
+                    border: 50px solid #eaeaea;
+                    left: calc(50%);
+                    position: relative;
+                    top: 125px;
+                }
+                
+                &.orange1{
+                    width: 250px;
+                    height: 250px;
+                    border: 50px solid $aov_normal_orange;
+                    bottom: 35px;
+                    position: absolute;
+                }
+                &.blue{
+                    border:40px solid $aov_normal_blue;
+                    width: 200px;
+                    height: 200px;
+                    right: 0px;
+                    bottom: 50px;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+/*
+ * GLOBALS
+ */
+ @import "../../../variables.scss";
+
+.aov_solutions_wrap{
+    margin-bottom: 200px;
+
+    .aov_title_header{
+        margin-top: 50px;
+    }
+    .aov_solutions_icons{
+        height: 300px;
+        border-radius: 60%;
+        width: 300px;
+       
+    }
+    .aov_industries_circles_holder{
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 300px;
+        top: -212px;
+        margin-bottom: -212px;
+        z-index: -1;
+
+        .aov_industries_circles_wrap{
+            position: absolute;
+            width: 100%;
+            
+           
+
+            .aov_industries_circles_item{
+                border-radius: 100%;
+                position: absolute;
+                
+                &.gray{
+                    width: 250px;
+                    height: 250px;
+                    left: 0px;
+                    top: 50px;
+                    border: 50px solid;
+                    border-color:#d0d0d0;
+                }
+                &.orange{
+                    border: 40px solid;
+                    border-color: $aov_normal_orange;
+                    width: 200px;
+                    height: 200px;
+                    right: 90px;
+                    top: 40px;
+                }
+                &.blue{
+                    border: 30px solid;
+                    border-color: $aov_normal_blue;
+                    width: 150px;
+                    height: 150px;
+                    right: 290px;
+                    top: 0px;
+                }
+            }
+        }
+    }
+}

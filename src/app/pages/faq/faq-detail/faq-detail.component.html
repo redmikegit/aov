@@ -1,0 +1,55 @@
+<app-top-nav></app-top-nav>
+<app-main-nav></app-main-nav>
+<div class="body_bg aov_inner"></div>
+<div class="aov_faq_wrap">
+
+  <div class="grid-container" *ngIf="faq">
+    <div class="grid-x grid-margin-x">
+      <div class="aov_inner_page_header_wrap cell medium-12 text-left">
+        <h4 class="aov_title_header blue"><a class="aov_faq_go_back" (click)="goBack()">{{title}}</a> > <span class=""> {{faq.faq_title }}</span></h4>
+      </div>
+       
+
+      <div class="cell medium-12 aov_faq_divider text-center"></div>
+
+
+      <div  class="cell medium-12">
+
+         <!-- <div><span>id: </span>{{faq.faq_id}}</div> -->
+        <div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nulla ipsum, voluptatum eligendi autem
+            aperiam. Dolorem, sequi voluptas rem labore, facere dolore eveniet, deserunt ea ipsum aspernatur
+            necessitatibus natus. Excepturi!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nulla ipsum, voluptatum eligendi autem
+            aperiam. Dolorem, sequi voluptas rem labore, facere dolore eveniet, deserunt ea ipsum aspernatur
+            necessitatibus natus. Excepturi!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nulla ipsum, voluptatum eligendi autem
+            aperiam. Dolorem, sequi voluptas rem labore, facere dolore eveniet, deserunt ea ipsum aspernatur
+            necessitatibus natus. Excepturi!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nulla ipsum, voluptatum eligendi autem
+            aperiam. Dolorem, sequi voluptas rem labore, facere dolore eveniet, deserunt ea ipsum aspernatur
+            necessitatibus natus. Excepturi!</p>
+        </div>
+
+        <button class="button aov_button_primary round small" (click)="goBack()">Go back to FAQ list</button>
+
+      </div>
+
+
+
+
+      <div class="cell medium-12 aov_faq_divider text-center"></div>
+
+    </div>
+  </div>
+
+
+
+
+</div><!-- // aov_faq_wrap-->
+
+ <!-- aov_footer_cta_wrap-->
+ <app-footer-cta></app-footer-cta> 
+ <!-- //aov_home_wrap -->
+
+<app-footer></app-footer>

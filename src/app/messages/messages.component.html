@@ -1,0 +1,7 @@
+<div *ngIf="messageService.messages.length" class="aov_notifications_wrap">
+
+    <h4>Messages</h4>
+    <a class="button tiny clear" (click)="messageService.clear()">x</a>
+    <div *ngFor='let message of messageService.messages'> {{message}} </div>
+  
+  </div>
