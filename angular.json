@@ -22,7 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon-32x32.png",
               "src/assets"
@@ -45,7 +45,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -124,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "aov"
+    }
+  },
+  "defaultProject": "aov",
+  "cli": {
+    "analytics": "5f91c294-87dd-49ae-8e32-4904c3ff2979"
+  }
 }
